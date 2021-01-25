@@ -1,0 +1,182 @@
+body
+{
+    margin: 0;
+}
+
+.container
+{
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    margin: .5em .5em;
+}
+
+.row
+{
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.flex-12
+{
+    display: flex;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+}
+
+.flex-6
+{
+    display: flex;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+}
+
+.navbar  a
+{
+    float: left;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: .5rem;
+    margin: .5rem;
+    color: white;
+    background-color: #FE5F55;
+    transition: background-color .5s;
+    transition-timing-function: ease-in-out;
+}
+
+.navbar a:hover
+{
+    background-color: #FEA09A;
+}
+
+
+.navbar ul
+{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container > .row:first-child
+{
+    background-color: #495867;
+}
+
+.container > .row:nth-child(2)
+{
+    background-color: #577399;
+}
+
+.container > .row:nth-child(3)
+{
+    background-color: #BDD5EA;
+    flex: 2 1 auto;
+}
+
+.container > .row:nth-child(4)
+{
+    background-color: #F7F7FF;
+    flex: 2 1 auto;
+}
+
+.navbar .icon 
+{
+    display: none;
+}
+
+@media only screen and (max-width: 640px) 
+{
+    .row
+    {
+        flex-direction: column;
+    }
+    
+}
+
+@media screen and (max-width: 640px) 
+{
+    
+    .navbar a 
+    {
+        display: none;
+        margin:0;
+    }
+    .navbar a.icon 
+    {
+      display: block;
+    }
+    .navbar
+    {
+        position: absolute;
+        right: 0.5rem;
+        top: 0.5rem;
+    }
+    
+
+    
+}
+  
+@media screen and (max-width: 640px) 
+{
+    .navbar.responsive
+    {
+        right: 0;
+        top: 0;
+    }
+
+    .navbar.responsive a 
+    {
+      float: none;
+      display: block;
+      text-align: center;
+      width: 100vw;
+      border-bottom:1px solid white ;
+    }
+
+    .navbar.responsive a:last-child
+    {
+        border-bottom: 0px;
+    }
+
+
+    .navbar.responsive a:first-child
+    {
+      display: none;
+    }
+
+    .navbar.responsive a 
+    {
+        animation-name: appear;
+        animation-duration: 1s;
+    }
+
+    @keyframes appear 
+    {
+        0%   {width: 0;}
+        100% {width: 100vw;}
+    }
+
+    .animation
+    {
+        animation-name: dissappear;
+        animation-duration: 1s;
+    }
+
+    @keyframes dissappear
+    {
+        0%   {width: 100vw;}
+        100% {width: 0;}
+    }
+
+    
+}
+
